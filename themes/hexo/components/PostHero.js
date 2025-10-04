@@ -5,6 +5,8 @@ import { useGlobal } from '@/lib/global'
 import { formatDateFmt } from '@/lib/utils/formatDate'
 import SmartLink from '@/components/SmartLink'
 import TagItemMini from './TagItemMini'
+// 用户添加组件
+import WordCount from '@/components/WordCount'
 
 /**
  * 文章详情页的Hero块
@@ -66,17 +68,21 @@ export default function PostHero({ post, siteInfo }) {
                     href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}
                     passHref
                     className='pl-1 mr-2 cursor-pointer hover:underline'>
-                    {locale.COMMON.POST_TIME}: {post?.publishDay}
+                    <i className='far fa-calendar-minus fa-fw' /> {locale.COMMON.POST_TIME}: {post?.publishDay} {/* 用户添加图标 */}
                   </SmartLink>
                 </>
               )}
               <div className='pl-1 mr-2'>
-                {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedDay}
+               <i className='far fa-calendar-check fa-fw' /> {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedDay} {/* 用户添加图标 */}
               </div>
+              <span className="mr-2">
+              <WordCount wordCount={post.wordCount} readTime={post.readTime} /> {/* 用户添加阅读时间和字数统计组件 */}
+            </span>
             </div>
 
             {JSON.parse(siteConfig('ANALYTICS_BUSUANZI_ENABLE')) && (
               <div className='busuanzi_container_page_pv font-light mr-2'>
+                <i className="far fa-eye fa-fw mr-1" /> {/* 用户添加图标 */}
                 <span className='mr-2 busuanzi_value_page_pv' />
                 {locale.COMMON.VIEWS}
               </div>
