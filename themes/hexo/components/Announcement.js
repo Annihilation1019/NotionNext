@@ -11,7 +11,7 @@ const Announcement = ({ post, className }) => {
         <section id='announcement-wrapper' className="dark:text-gray-300 border dark:border-black rounded-xl lg:p-6 p-4 bg-white dark:bg-hexo-black-gray">
         <div><i className='mr-2 fas fa-bullhorn' />{locale.COMMON.ANNOUNCEMENT}</div>
         {/* 用户新增运行天数 */}
-        <div className='text-center text-gray-600 dark:text-gray-400 mt-2'>
+        <div className='text-center text-black dark:text-white mt-2'>
           {(() => {
             const targetDate = new Date(siteConfig('HEXO_SITE_CREATE_TIME'))
             const today = new Date()
