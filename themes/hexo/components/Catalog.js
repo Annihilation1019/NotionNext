@@ -90,7 +90,7 @@ const Catalog = ({ toc }) => {
                     display: 'inline-block',
                     marginLeft: tocItem.indentLevel * 16
                   }}
-                  className={`truncate ${activeSection === id ? ' font-bold text-indigo-800 dark:text-white underline' : ''}`}>
+                  className={`break-words ${activeSection === id ? ' font-bold text-indigo-800 dark:text-white underline' : ''}`}>
                   {tocItem.text}
                 </span>
               </a>
