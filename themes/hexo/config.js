@@ -45,6 +45,6 @@ const CONFIG = {
   // 用户新增
   HEXO_SITE_CREATE_TIME: '2025-10-03', // 建站日期，用于计算网站运行的第几天
 
-  HEXO_THEME_COLOR: '#928CEE' // 主题色配置（默认为 #928CEE）
+  HEXO_THEME_COLOR: '#1D4ED8' // 主题色配置（默认为 #928CEE）
 }
 export default CONFIG
